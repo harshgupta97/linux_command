@@ -344,3 +344,11 @@ cut -d: -f 6-7 /etc/passwd
 // Onyl print user permission of files/dir
 ls -l | cut -c2-4
 ```
+
+- `grep|egrep`
+
+What is grep?
+
+The grep command which stands for "Global regular expression print" process text line by line and prints any lines which match a specified pattern.
+
+

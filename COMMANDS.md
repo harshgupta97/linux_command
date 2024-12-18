@@ -219,3 +219,79 @@ cut -d: -f 6-7 /etc/passwd
 ls -l | cut -c2-4
 ```
 
+- `awk`
+
+```
+// check version
+awk --version
+
+// list 1 field from a file
+awk '{print $1}' file
+
+// list 1 and  3 field of ls -l output
+ls -l | awk '{print $1, $3}'
+
+// last field of the output
+ls -l | awk '{print $NF}'
+
+// search for a specific word
+awk '/Jerry/ {print}' file
+
+// output only 1 field of /etc/passwd
+awk -F: '{print $1}' /etc/passwd
+
+// replace words field words
+echo "Hello Tom" | awk '{$2="Adam"; print $0}'
+
+// replace words field words
+cat <filename> | awk '{$2="Imran"; print $0}'
+
+// get lines that have more then 15 byte size
+awk 'length($0) > 15' <filename>
+
+// get field matching <key> in <path>(/home/)
+ls -l | awk '{if($9 == "<key>") print $0;}'
+
+// number of fields
+ls -l | awk '{print NF}'
+```
+
+- `grep/egep`
+
+```
+// version
+grep --version
+
+// help
+grep --help
+
+// search for a keyword from a file
+grep <keyword> <file>
+
+// search for keyword and count
+grep -c <keyword> <file>
+
+// search for a keyword ignore case-sensitive
+grep -i <keyword> <file>
+
+// Display the matched lines and their line numbers
+grep -n <keyword> <filename>
+
+// Display everything but the keyword 
+grep -v <keyword> <file>
+
+// search for a keyword and then only give the first field
+grep <keyword> <file> | awk '{print $1}'
+
+ls -l | grep Desktop
+
+// multiple keywords
+egrep <keyword1|keyword2> file
+
+```
+NOTE: We can mix multiple flags together
+```
+grep -vi
+v = opposite
+i = case insensitive
+```
