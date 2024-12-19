@@ -345,10 +345,25 @@ cut -d: -f 6-7 /etc/passwd
 ls -l | cut -c2-4
 ```
 
+- `awk`
+awk is a utility/language designed for data extraction. Most of the time it is used to extract fields from a file or from an output
+
 - `grep|egrep`
 
 What is grep?
 
 The grep command which stands for "Global regular expression print" process text line by line and prints any lines which match a specified pattern.
 
+- `sort/uniq`
 
+Sort command sorts in alphabetical order
+Uniq commands filters out the repeated or duplicate lines
+
+- `wc`
+
+The command reads either standard input or a file and generates: newline count, word count, and byte count
+
+## Compare files
+
+- diff (Line by Line)
+- cmp (byte by byte)

@@ -295,3 +295,68 @@ grep -vi
 v = opposite
 i = case insensitive
 ```
+
+- `sort/uniq`
+
+```
+// version and help
+sort --version or sort --help or man sort
+
+// sort file
+sort <filename>
+
+// sort in reverse order
+sort -r <filename>
+
+// sort by field number
+sort -k<column number> <filename>
+
+// remove duplicate
+uniq <filename> it will not work if the list is not sorted
+
+// always sort first before using uniq their line numbers
+sort <filename> | uniq
+
+// sort first then uniq and list count
+sort <filename> | uniq -c
+
+// display only duplicate
+sort <filename> | uniq -d
+```
+
+- `wc`
+
+```
+// check version OR help
+wc --version OR wc --help OR man wc
+
+// check the line count, word count and byte count
+wc <filename>
+// output -> {lines} {words} {size} {filename}
+
+// Get the number of line
+wc -l <filename>
+
+// Get the number of word
+wc -w <filename>
+
+// Get the number of byte
+wc -c <filename>
+
+// wc on directory is not allowed
+
+// number of files
+ls -l | wc -l
+
+// number of keyword lines
+grep <keyword> | wc -l
+```
+
+## Compare Files
+
+```
+diff <filename1> <filename2>
+
+cmp <filename1> <filename2>
+```
+
