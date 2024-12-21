@@ -367,3 +367,50 @@ The command reads either standard input or a file and generates: newline count, 
 
 - diff (Line by Line)
 - cmp (byte by byte)
+
+## Compress and Un-compress Files
+
+- tar
+    tar does not compress file.
+
+- gzip
+- gzip -d OR gunzip
+
+## Truncate file size
+
+- The linux `truncate` command is often used to shrink or extend the size of a file to the specified size
+
+NOTE: File will loose information if you reduce the size
+
+## Combine and Splitting files
+
+- Multiple files can be combined into one
+- One file can be split into multiple
+
+## Executing multiple commands with `;`
+
+- 1970 UNIX brings the concept of command chaining
+- 1980 bourne shell use `;`
+
+Command chaining usage
+- Scripting
+- Automation
+- Daily tasks
+
+NOTE: It will not pause the execution chain if any command fail in between
+
+## Linux vs Windows commands
+
+    Win         Linux       Description
+
+-   dir         ls -l       Listing of a directory
+-   ren         mv          Rename file
+-   copy        cp          Copy file
+-   move        mv          Move file
+-   cls         clear       Clear screen
+-   del         rm          Delete file
+-   fc          diff        Compare content of files
+-   find        grep        Search for keyword
+-   command /?  man command manual of any command
+-   chdir       pwd         print working directory
+-   time        date        Display time

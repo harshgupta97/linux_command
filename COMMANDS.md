@@ -359,4 +359,39 @@ diff <filename1> <filename2>
 
 cmp <filename1> <filename2>
 ```
+## Compress and Uncompress files
+
+```
+tar cvf <tarfilename>.tar <source>
+
+tar xvf <tarfilename>
+
+gzip <filename>
+
+gzip -d OR gunzip <filename>
+```
+
+## Truncate file size
+
+```
+truncate -s <size> filename
+```
+
+## Combining and Splitting files
+
+```
+cat <filename1> <filename2> <filename3> > <outputfile>
+
+split file4
+
+eg: split -l 300 file.txt childfile
+
+split file.txt into 300 lines per file and output to childfilea, childfileb and childfilec
+```
+
+## Executing multiple commands with `;`
+
+```
+ls ; pwd ; whoami
+```
 
